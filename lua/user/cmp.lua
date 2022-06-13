@@ -15,6 +15,10 @@ local check_backspace = function()
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
+--拼写补全，目前无法删除下方红线下划线,暂时不使用。
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { 'en_us' }
+
 --   פּ ﯟ   some other good icons
 local kind_icons = {
     Text = "",
@@ -105,6 +109,7 @@ cmp.setup {
                 luasnip = "[Snippet]",
                 buffer = "[Buffer]",
                 path = "[Path]",
+                -- spell = "[Spell]",
             })[entry.source.name]
             return vim_item
         end,
@@ -114,6 +119,7 @@ cmp.setup {
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+        -- { name = "spell" },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
