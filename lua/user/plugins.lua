@@ -16,12 +16,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -59,16 +59,19 @@ return packer.startup(function(use)
     use "akinsho/toggleterm.nvim" --终端插件
     use "ahmedkhalf/project.nvim"
     use "lewis6991/impatient.nvim" --延迟加载插件
-    use "lukas-reineke/indent-blankline.nvim"
-    use "goolord/alpha-nvim"
+    use "lukas-reineke/indent-blankline.nvim" --缩进空行显示
+    use "goolord/alpha-nvim" --启动界面插件
     use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
     use "folke/which-key.nvim"
     use "yianwillis/vimcdoc" --vim中文帮助文档
     use "RRethy/vim-illuminate" --高亮鼠标下单词
+    use "davidgranstrom/nvim-markdown-preview" --markdown插件
+    -- use 'kevinhwang91/nvim-hlslens' --高亮搜索项
 
     -- Colorschemes
-    -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
     use "lunarvim/darkplus.nvim"
+    use {"catppuccin/nvim",as = "catppuccin"}
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
