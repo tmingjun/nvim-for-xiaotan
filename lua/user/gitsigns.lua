@@ -5,9 +5,14 @@ end
 
 gitsigns.setup {
     signs = {
-        add = { text = "▎" },
+        -- add = { text = "▎" },
+        -- change = { text = "▎" },
+        -- delete = { text = "▎" },
+        -- topdelete = { text = "契" },
+        -- changedelete = { text = "▎" },
+        add = { text = "+" },
         change = { text = "▎" },
-        delete = { text = "▎" },
+        delete = { text = "-" },
         topdelete = { text = "契" },
         changedelete = { text = "▎" },
     },
