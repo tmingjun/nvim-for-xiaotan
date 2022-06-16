@@ -20,4 +20,5 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.tmux"
+require "user.markdown-preview"
 -- require "user.hlslens"  --改插件使用后会崩溃，暂时不用
