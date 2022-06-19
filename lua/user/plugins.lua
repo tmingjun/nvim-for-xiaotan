@@ -66,6 +66,7 @@ return packer.startup(function(use)
     use "yianwillis/vimcdoc" --vim中文帮助文档
     use "RRethy/vim-illuminate" --高亮鼠标下单词
     use "iamcco/markdown-preview.nvim"
+    use "voldikss/vim-translator" --chinesse translator
     -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
     -- use "davidgranstrom/nvim-markdown-preview" --markdown插件
     -- use 'kevinhwang91/nvim-hlslens' --高亮搜索项

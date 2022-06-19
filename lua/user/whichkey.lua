@@ -168,6 +168,7 @@ local mappings = {
         C = { "<cmd>Telescope commands<cr>", "Commands" },
         d = { "<cmd>Telescope lsp_definitions<cr>", "definitions" },
         r = { "<cmd>Telescope lsp_references<cr>", "references" },
+        t = { "<cmd>TranslateW<cr>", "translate" },
     },
 
     t = {
