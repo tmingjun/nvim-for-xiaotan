@@ -6,7 +6,7 @@ end
 catppuccin.setup(
     {
         -- 透明背景
-        transparent_background = false,
+        transparent_background = true,
         -- 使用终端背景色
         term_color = false,
         -- 代码样式
@@ -38,7 +38,7 @@ catppuccin.setup(
                 enabled = true,
                 show_root = false,
                 -- 透明背景
-                transparent_panel = false,
+                transparent_panel = true,
             },
             native_lsp = {
                 enabled = true,

@@ -24,3 +24,6 @@
 cd ~/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim/app/
 ./install.sh
 ```
+2. neovim 系统剪切板无法共享到neovim内部  
+安装 xclip
+    > sudo apt-get install -y xclip
