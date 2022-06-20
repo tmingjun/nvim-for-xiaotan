@@ -35,6 +35,22 @@ local options = {
     guifont = "monospace:h17", -- the font used in graphical neovim applications
 }
 
+-- vim.cmd [[
+-- set clipboard+=unnamedplus
+-- let g:clipboard = {
+--           \   'name': 'myClipboard',
+--           \   'copy': {
+--           \      '+': ['tmux', 'load-buffer', '-'],
+--           \      '*': ['tmux', 'load-buffer', '-'],
+--           \    },
+--           \   'paste': {
+--           \      '+': ['tmux', 'save-buffer', '-'],
+--           \      '*': ['tmux', 'save-buffer', '-'],
+--           \   },
+--           \   'cache_enabled': 1,
+--           \ }
+-- ]]
+
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do

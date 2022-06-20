@@ -69,7 +69,7 @@ return packer.startup(function(use)
     use "voldikss/vim-translator" --chinesse translator
     -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
     -- use "davidgranstrom/nvim-markdown-preview" --markdown插件
-    -- use 'kevinhwang91/nvim-hlslens' --高亮搜索项
+    use 'kevinhwang91/nvim-hlslens' --高亮搜索项
 
     -- Colorschemes
     use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
