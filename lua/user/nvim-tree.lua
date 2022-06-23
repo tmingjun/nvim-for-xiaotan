@@ -69,7 +69,7 @@ nvim_tree.setup {
         mappings = {
             custom_only = false,
             list = {
-                { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+                { key = { "l", "<cr>", "o" }, cb = tree_cb "edit" },
                 { key = "h", cb = tree_cb "close_node" },
                 { key = "v", cb = tree_cb "vsplit" },
             },
@@ -108,25 +108,26 @@ nvim_tree.setup {
                 },
                 git = {
                     unstaged = "",
-                    staged = "S",
+                    staged = "s",
                     unmerged = "",
                     renamed = "➜",
-                    untracked = "U",
+                    untracked = "u",
                     deleted = "",
                     ignored = "◌",
                 },
             },
         }
-    }
+    },
 
---  unknown options as of 22.05
---
---  update_to_buf_dir = {
---    enable = true,
---    auto_open = true,
---  },
---  auto_resize = true,
---  git_hl = 1,
---  root_folder_modifier = ":t",
+    --  unknown options as of 22.05
+    --
+    respect_buf_cwd = true,
+    update_to_buf_dir = {
+        enable = false,
+        auto_open = false,
+    },
+    --  auto_resize = true,
+    --  git_hl = 1,
+    --  root_folder_modifier = ":t",
 
 }

@@ -18,6 +18,10 @@
     ```
     tmux depends on [libevent](https://github.com/libevent/libevent) 2.x, available from [release](https://github.com/libevent/libevent/releases/tag/release-2.1.12-stable).
 
+- clang-format 格式化C/c++
+> sudo apt-get install clang-format--
+> 
+
 ***Tips:*** first use `:checkhealth` to impress your development is OK  
 
 - ERROR: **npm**: not available
@@ -64,6 +68,8 @@
 - [yianwillis/vimcdoc](https://github.com/yianwillis/vimcdoc) --vim中文帮助文档
 - [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate) --高亮鼠标下单词
 - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+- [voldikss/vim-translator](https://github.com.voldikss/vim-translator) --chinesse translator]
+- [kevinhwang91/nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens) --高亮搜索项
 
 ***Colorschemes plugins***
 
@@ -90,7 +96,6 @@
 
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) -- enable LSP
 - [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) -- simple to use language server installer
-- [tamago324/nlsp-settings.nvim](https://github.com/tamago324/nlsp-settings.nvim) -- language server settings defined in json for
 - [jose-elias-alvarez/null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) -- for formatters and linters
 
 ***Telescope plugins***

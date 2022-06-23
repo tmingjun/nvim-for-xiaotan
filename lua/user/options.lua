@@ -23,10 +23,10 @@ local options = {
     writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
     expandtab = true, -- convert tabs to spaces
     shiftwidth = 4, -- the number of spaces inserted for each indentation
-    tabstop = 2, -- insert 2 spaces for a tab
+    tabstop = 4, -- insert 2 spaces for a tab
     cursorline = true, -- highlight the current line
     number = true, -- set numbered lines
-    relativenumber = true, -- set relative numbered lines
+    -- relativenumber = true, -- set relative numbered lines
     numberwidth = 4, -- set number column width to 2 {default 4}
     signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
     wrap = false, -- display lines as one long line
@@ -36,18 +36,17 @@ local options = {
 }
 
 -- vim.cmd [[
--- set clipboard+=unnamedplus
 -- let g:clipboard = {
 --           \   'name': 'myClipboard',
 --           \   'copy': {
---           \      '+': ['tmux', 'load-buffer', '-'],
---           \      '*': ['tmux', 'load-buffer', '-'],
+--           \      '+': ['xclip'],
+--           \      '*': ['xclip'],
 --           \    },
 --           \   'paste': {
---           \      '+': ['tmux', 'save-buffer', '-'],
---           \      '*': ['tmux', 'save-buffer', '-'],
+--           \      '+': ['xclip'],
+--           \      '*': ['xclip'],
 --           \   },
---           \   'cache_enabled': 1,
+--           \   'cache_enabled': 0,
 --           \ }
 -- ]]
 

@@ -74,7 +74,7 @@ return packer.startup(function(use)
     -- Colorschemes
     use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
     use "lunarvim/darkplus.nvim"
-    use {"catppuccin/nvim",as = "catppuccin"}
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -92,11 +92,15 @@ return packer.startup(function(use)
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-    use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+    -- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+    use "kosayoda/nvim-lightbulb" -- code action
+    use "ray-x/lsp_signature.nvim" -- show function signature when typing
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
+    use "nvim-telescope/telescope-file-browser.nvim"
+    -- use "nvim-telescope/telescope-project.nvim"
 
     -- Treesitter
     use {
