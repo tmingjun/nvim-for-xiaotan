@@ -97,10 +97,13 @@
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) -- enable LSP
 - [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer) -- simple to use language server installer
 - [jose-elias-alvarez/null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) -- for formatters and linters
+- [kosayoda/nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb) -- code action
+- [ray-x/lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim) -- show function signature when typing
 
 ***Telescope plugins***
 
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-telescope/telescope-file-browser.nvim](https://github.com/nvim-telescope/telescope-file-browser.nvim)
 
 ***Treesitter plugins***
 

@@ -84,7 +84,12 @@ local mappings = {
         "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Buffers",
     },
-    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    e = {
+        name = "Explorer",
+        e = { "<cmd>Neotree filesystem toggle left<cr>", "filesystem"},
+        f = { "<cmd>Neotree filesystem toggle float<cr>", "filesystem"},
+        g = { "<cmd>Neotree git_status float<cr>", "git_status"},
+    },
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -93,7 +98,11 @@ local mappings = {
         "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "Find files",
     },
-    ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+    F = {
+        name = "Find text",
+        a = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "grep args"},
+        g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+    },
     ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
     p = {

@@ -52,7 +52,7 @@ return packer.startup(function(use)
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use "numToStr/Comment.nvim" -- Easily comment stuff
     use "kyazdani42/nvim-web-devicons"
-    use "kyazdani42/nvim-tree.lua"
+    -- use "kyazdani42/nvim-tree.lua"
     use "akinsho/bufferline.nvim" --bufferline显示插件
     use "moll/vim-bbye" --buffer插件，提供buffer删除功能
     use "nvim-lualine/lualine.nvim" --状态栏插件
@@ -94,14 +94,15 @@ return packer.startup(function(use)
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
     -- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-    use "kosayoda/nvim-lightbulb" -- code action
+    -- use "kosayoda/nvim-lightbulb" -- code action
     use "ray-x/lsp_signature.nvim" -- show function signature when typing
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use "nvim-telescope/telescope-file-browser.nvim"
     -- use "nvim-telescope/telescope-project.nvim"
-
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { "nvim-telescope/telescope-live-grep-args.nvim" }
     -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
@@ -116,6 +117,18 @@ return packer.startup(function(use)
     --tmux
     use "aserowy/tmux.nvim"
 
+    --neo-tree
+    -- Unless you are still migrating, remove the deprecated commands from v1.x
+    vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+        }
+    }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

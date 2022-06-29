@@ -12,15 +12,15 @@ if not config_status_ok then
 end
 
 -- Replaces auto_close
-local tree_cb = nvim_tree_config.nvim_tree_callback
-vim.api.nvim_create_autocmd("BufEnter", {
-    nested = true,
-    callback = function()
-        if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
-            vim.cmd "quit"
-        end
-    end
-})
+-- local tree_cb = nvim_tree_config.nvim_tree_callback
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     nested = true,
+--     callback = function()
+--         if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
+--             vim.cmd "quit"
+--         end
+--     end
+-- })
 
 nvim_tree.setup {
     disable_netrw = true,
@@ -68,11 +68,11 @@ nvim_tree.setup {
         side = "left",
         mappings = {
             custom_only = false,
-            list = {
-                { key = { "l", "<cr>", "o" }, cb = tree_cb "edit" },
-                { key = "h", cb = tree_cb "close_node" },
-                { key = "v", cb = tree_cb "vsplit" },
-            },
+            -- list = {
+            --     { key = { "l", "<cr>", "o" }, cb = tree_cb "edit" },
+            --     { key = "h", cb = tree_cb "close_node" },
+            --     { key = "v", cb = tree_cb "vsplit" },
+            -- },
         },
         number = false,
         relativenumber = false,
