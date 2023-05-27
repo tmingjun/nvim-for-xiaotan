@@ -72,9 +72,10 @@ return packer.startup(function(use)
     use 'kevinhwang91/nvim-hlslens' --高亮搜索项
 
     -- Colorschemes
-    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-    use "lunarvim/darkplus.nvim"
-    use { "catppuccin/nvim", as = "catppuccin" }
+--    use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+--    use "lunarvim/darkplus.nvim"
+--    use { "catppuccin/nvim", as = "catppuccin" }
+    use "rafamadriz/neon"
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
